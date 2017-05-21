@@ -18,7 +18,7 @@ class MyChain(Chain):
         )
 
     def __call__(self, x):
-        h = self.l1(x)
+        h = F.relu(self.l1(x))
         return self.l2(h)
 
 model = MyChain()
@@ -32,10 +32,10 @@ for path, param in model.namedparams():
     print(param.data)
 print()
 
-x_data = [[1, 2],
-          [3, 4],
-          [5, 6]]
-t_data = [0, 1, 0]
+x_data = [[0.1, 0.4],
+          [0.2, 0.5],
+          [0.3, 0.6]]
+t_data = [1, 0, 0]
 
 x = Variable(np.array(x_data, dtype=np.float32))
 t = Variable(np.array(t_data, dtype=np.int32))

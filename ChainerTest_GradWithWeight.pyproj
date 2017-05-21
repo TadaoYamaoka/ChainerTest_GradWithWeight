@@ -22,6 +22,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ConvTest_weight_gpu.py" />
+    <Compile Include="ConvTest_base.py" />
     <Compile Include="ChainerTest_base.py" />
     <Compile Include="ChainerTest_cpu.py" />
     <Compile Include="ChainerTest_gpu.py" />
